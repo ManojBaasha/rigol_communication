@@ -9,3 +9,7 @@ Attempting to use the python extension Pyvisa
 This software will automatically install the required driver for your device 
 
 2. Run check_for_connection.py to make sure it is detecting the device
+
+3. Run main.py which is a basic example to adjust calibrate the scale of the oscilloscope
+
+gg if all if it works
