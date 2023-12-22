@@ -1,7 +1,10 @@
 import pyvisa
 rm = pyvisa.ResourceManager()
-rm.list_resources()
+devices = rm.list_resources()
 inst = rm.open_resource(rm.list_resources()[0])
+for i in devices:
+    if("DS1ET1" in i):
+        inst = rm.open_resource(i)
 inst.write("*rst; status:preset; *cls")
 import time
 
