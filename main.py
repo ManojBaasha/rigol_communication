@@ -1,6 +1,8 @@
 import pyvisa
 rm = pyvisa.ResourceManager()
-rm.list_resources()
+for i in rm.list_resources():
+     print(i)
+
 inst = rm.open_resource('USB0::0x1AB1::0x0588::DS1ET180300771::INSTR')
 inst.write("*rst; status:preset; *cls")
 import time
